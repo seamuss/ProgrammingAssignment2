@@ -18,6 +18,7 @@
 # -setinverse(inverse) set the matrix inverse	
 # -getinverse() get the inverse matrix
 #
+
 makeCacheMatrix <- function(x = matrix()) {
   # initialise the inverse to null
   i <- NULL
@@ -43,7 +44,8 @@ makeCacheMatrix <- function(x = matrix()) {
 #
 # Extend the solve function to enable caching
 # cacheSolve(x,...) where x,... are matrices
-#
+#\
+
 cacheSolve <- function(x, ...) {
   # return the cached matrix for x where possible
   i <- x$getinverse()
