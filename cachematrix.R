@@ -1,15 +1,21 @@
 # cachematrix.R
-# Tasks to complete the assignment
-# makeCacheMatrix =>  function to extend a matrix by adding inverse 
-#                     properties
-# cacheSolve => function extending the core solve(x,...) function 
-#               to make use of a cached inverse where available
-
+# There is two functions to be included in this assignment and are detailed below. 
+# I have added in comments throughout the code to ensure each step is explain. Below is a high-level overview of each function.
+#
+# Function 1
+#
+# makeCacheMatrix =>  this function will extend a matrix by adding inverse properties
+#
+# Function 2
+#
+# cacheSolve => this function will extend the core solve(x,...) function to make use of a cached inverse where available
+#
+#Steps need to ensure are covered in Function 1
 #
 # Create an extended matrix
 # -get() gets the matrix
 # -set(y) updates the matrix content
-# -setinverse(inverse) set the matrix inverse
+# -setinverse(inverse) set the matrix inverse	
 # -getinverse() get the inverse matrix
 #
 makeCacheMatrix <- function(x = matrix()) {
@@ -29,13 +35,13 @@ makeCacheMatrix <- function(x = matrix()) {
   # function to return the inverse
   getinverse <- function() i
   # Return the special extended matrix as a list 
-  list(get = get,
-       setinverse = setinverse,
-       getinverse = getinverse)
+  list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
 #
-# Entended solve function to enable caching
+#Steps need to ensure are covered in Function 2
+#
+# Extend the solve function to enable caching
 # cacheSolve(x,...) where x,... are matrices
 #
 cacheSolve <- function(x, ...) {
